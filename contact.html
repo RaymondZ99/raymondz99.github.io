@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上海仲荟化学有限公司</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/less.css">
+    <script type="text/javascript"
+        src="http://api.map.baidu.com/api?v=2.0&ak=UG6KCjThlwjV35SERG7bVU3CgSwHicOT"></script>
+    <script type="text/javascript"
+        src="http://api.map.baidu.com/api?v=2.0&ak=XvQEOWZ7s49gOoSEyOfZ2ydXkvhrTb7c"></script>
+</head>
+
+<body>
+    <!-- 手机头部 -->
+    <div class="m-hd">
+        <div class="m-bar">
+            <a class="m-trigger"></a>
+            <a href="index.html" class="logo-m"><img src="images/logo.png" alt=""></a>
+        </div>
+        <ul class="m-nav" id="m-menu">
+            <li><a href="index.html" class="a1">首页</a></li>
+            <li><a href="about.html">走进仲荟</a></li>
+            <li><a href="product.html">产品应用</a></li>
+            <li><a href="hr.html">招贤纳才</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+    </div>
+
+    <!-- header -->
+    <div id="header">
+        <div class="container">
+            <a href="index.html" class="l logo"><img src="./images/logo.png" alt="上海仲荟化学有限公司"></a>
+            <ul id="nav" class="r">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">走进仲荟</a></li>
+                <li><a href="product.html">产品应用</a></li>
+                <li><a href="hr.html">招贤纳才</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <img src="./images/inbar.png" alt="" id="inbar">
+
+    <div id="location">
+        <div class="container">
+            当前位置：
+            <a href="index.html">首页</a> &gt;
+            <a href="contact.html">联系我们</a>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="leftPart fl mr30">
+                <img src="./images/in4.png" alt="">
+                <ul>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="rightPart oh">
+                <h5 class="title2 mb20">公司地址</h5>
+                <div style="width:100%;height:550px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+                <br>
+                <br>
+                <h5 class="title2 mb20">仓库地址</h5>
+                <div style="width:100%;height:550px;border:#ccc solid 1px;font-size:12px" id="map2"></div>
+                <br>
+                <br>
+                <h3>上海仲荟化学有限公司</h3>
+                <br>
+                <p style="line-height: 30px; color: #999999;">
+                    公司地址：上海市嘉定区嘉罗公路336号科创大厦1028室<br>
+                    工厂地址：江苏省太仓市港口开发区协鑫路8号乙<br>
+                    电话号码：021-59948796<br>
+                    手机号码：15000324998
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="container">
+            <p align="center">© 2009-2018 版权所有 上海仲荟化学有限公司</p>
+        </div>
+    </div>
+
+    <div class="side">
+        <ul>
+            <li class="s1"><a href="#">
+                    <div class="sidebox"><span>联系我们</span>+86-0512-69561921</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="backtop"><a href="javascript:void(0);"></a></div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/lib.js"></script>
+
+
+    <link rel="stylesheet" href="css/slick.css">
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script>
+
+        $('#banner .slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            autoplay: true
+        });
+
+
+        $('.news-slider .slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            autoplay: true
+        });
+
+
+        $('.side ul li.s2').click(function () {
+            $('.pop-bg').show();
+            return false;
+        });
+        $('#pop-index h3 .close').click(function () {
+            $('.pop-bg').hide();
+        })
+    </script>
+    <script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap() {
+            createMap();//创建地图
+            setMapEvent();//设置地图事件
+            addMapControl();//向地图添加控件
+            addMapOverlay();//向地图添加覆盖物
+        }
+        function createMap() {
+            map = new BMap.Map("map");
+            map.centerAndZoom(new BMap.Point(121.268494, 31.384472), 17);
+        }
+        function setMapEvent() {
+            map.enableScrollWheelZoom();
+            map.enableKeyboard();
+            map.enableDragging();
+            map.enableDoubleClickZoom()
+        }
+        function addClickHandler(target, window) {
+            target.addEventListener("click", function () {
+                target.openInfoWindow(window);
+            });
+        }
+        function addMapOverlay() {
+            var markers = [
+                { content: "上海市嘉定区嘉罗公路336号科创大厦1028室", title: "上海仲荟化学有限公司", imageOffset: { width: -23, height: -21 }, position: { lat: 31.385092, lng: 121.269176 } }
+            ];
+            for (var index = 0; index < markers.length; index++) {
+                var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
+                var marker = new BMap.Marker(point, {
+                    icon: new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png", new BMap.Size(20, 25), {
+                        imageOffset: new BMap.Size(markers[index].imageOffset.width, markers[index].imageOffset.height)
+                    })
+                });
+                var label = new BMap.Label(markers[index].title, { offset: new BMap.Size(25, 5) });
+                var opts = {
+                    width: 200,
+                    title: markers[index].title,
+                    enableMessage: false
+                };
+                var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
+                marker.setLabel(label);
+                addClickHandler(marker, infoWindow);
+                map.addOverlay(marker);
+            };
+        }
+        //向地图添加控件
+        function addMapControl() {
+            var scaleControl = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+            scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+            map.addControl(scaleControl);
+            var navControl = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: 0 });
+            map.addControl(navControl);
+            var overviewControl = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: false });
+            map.addControl(overviewControl);
+        }
+        var map;
+        initMap();
+    </script>
+
+    <script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap2() {
+            createMap2();//创建地图
+            setMapEvent2();//设置地图事件
+            addMapControl2();//向地图添加控件
+            addMapOverlay2();//向地图添加覆盖物
+        }
+        function createMap2() {
+            map = new BMap.Map("map2");
+            map.centerAndZoom(new BMap.Point(121.250322, 31.583898), 17);
+        }
+        function setMapEvent2() {
+            map.enableScrollWheelZoom();
+            map.enableKeyboard();
+            map.enableDragging();
+            map.enableDoubleClickZoom()
+        }
+        function addClickHandler(target, window) {
+            target.addEventListener("click", function () {
+                target.openInfoWindow(window);
+            });
+        }
+        function addMapOverlay2() {
+            var markers = [
+                { content: "江苏省太仓市港口开发区协鑫路8号乙", title: "仓库地址", imageOffset: { width: 0, height: 3 }, position: { lat: 31.582498, lng: 121.246818 } }
+            ];
+            for (var index = 0; index < markers.length; index++) {
+                var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
+                var marker = new BMap.Marker(point, {
+                    icon: new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png", new BMap.Size(20, 25), {
+                        imageOffset: new BMap.Size(markers[index].imageOffset.width, markers[index].imageOffset.height)
+                    })
+                });
+                var label = new BMap.Label(markers[index].title, { offset: new BMap.Size(25, 5) });
+                var opts = {
+                    width: 200,
+                    title: markers[index].title,
+                    enableMessage: false
+                };
+                var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
+                marker.setLabel(label);
+                addClickHandler(marker, infoWindow);
+                map.addOverlay(marker);
+            };
+        }
+        //向地图添加控件
+        function addMapControl2() {
+            var scaleControl = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+            scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+            map.addControl(scaleControl);
+            var navControl = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+            map.addControl(navControl);
+            var overviewControl = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: true });
+            map.addControl(overviewControl);
+        }
+        var map;
+        initMap2();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上海仲荟化学有限公司</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/less.css">
+</head>
+
+<body>
+    <!-- 手机头部 -->
+    <div class="m-hd">
+        <div class="m-bar">
+            <a class="m-trigger"></a>
+            <a href="index.html" class="logo-m"><img src="images/logo.png" alt=""></a>
+        </div>
+        <ul class="m-nav" id="m-menu">
+            <li><a href="index.html" class="a1">首页</a></li>
+            <li><a href="about.html">走进仲荟</a></li>
+            <li><a href="product.html">产品应用</a></li>
+            <li><a href="hr.html">招贤纳才</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+    </div>
+
+    <!-- header -->
+    <div id="header">
+        <div class="container">
+            <a href="index.html" class="l logo"><img src="./images/logo.png" alt="上海仲荟化学有限公司"></a>
+            <ul id="nav" class="r">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">走进仲荟</a></li>
+                <li><a href="product.html">产品应用</a></li>
+                <li><a href="hr.html">招贤纳才</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <img src="./images/inbar.png" alt="" id="inbar">
+
+    <div id="location">
+        <div class="container">
+            当前位置：
+            <a href="index.html">首页</a> &gt;
+            <a href="product.html">产品应用</a>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="leftPart fl mr30">
+                <img src="./images/in2.png" alt="">
+                <ul>
+                    <li><a href="product.html">产品应用</a></li>
+                </ul>
+            </div>
+            <div class="rightPart oh">
+                <ul id="productList">
+                    <li>
+                        <a href="productDetail1.html">
+                            <div class="img">
+                                <img src="./images/pro1.jpg" alt="">
+                            </div>
+                            <h3>双组分无溶剂复合胶黏剂</h3>
+                            <p>YK861A/B</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="productDetail2.html">
+                            <div class="img">
+                                <img src="./images/pro2.jpg" alt="">
+                            </div>
+                            <h3>双组分无溶剂复合胶黏剂</h3>
+                            <p>YK961A/B</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="productDetail3.html">
+                            <div class="img">
+                                <img src="./images/pro3.jpg" alt="">
+                            </div>
+                            <h3>双组分无溶剂复合胶黏剂</h3>
+                            <p>YK861A/B</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="container">
+            <p align="center">© 2009-2018 版权所有 上海仲荟化学有限公司</p>
+        </div>
+    </div>
+
+    <div class="side">
+        <ul>
+            <li class="s1"><a href="#">
+                    <div class="sidebox"><span>联系我们</span>+86-0512-69561921</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="backtop"><a href="javascript:void(0);"></a></div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/lib.js"></script>
+
+
+    <link rel="stylesheet" href="css/slick.css">
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script>
+
+        $('#banner .slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            autoplay: true
+        });
+
+
+        $('.news-slider .slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            autoplay: true
+        });
+
+
+        $('.side ul li.s2').click(function () {
+            $('.pop-bg').show();
+            return false;
+        });
+        $('#pop-index h3 .close').click(function () {
+            $('.pop-bg').hide();
+        })
+    </script>
+</body>
+
+</html>

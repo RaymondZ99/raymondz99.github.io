@@ -1,0 +1,106 @@
+﻿@media screen and (max-width: 1140px) {}
+
+@media screen and (max-width: 1025px) {
+    #entry .container {
+        text-align: center;
+    }
+
+    #entry .container .pic {
+        float: none;
+        margin: 0;
+    }
+
+    #entry .container .oh {
+        width: auto;
+    }
+
+    #backtop {
+        display: none;
+        top: auto;
+        bottom: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    #backtop a {
+        width: 50px;
+        height: 50px;
+        background-size: 30px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #idxAbout img.fl {
+        padding-right: 3%;
+    }
+
+    #idxAbout .txt {
+        overflow: inherit;
+    }
+
+    #idxPro .idxProIn {
+        width: 100%;
+    }
+
+    #idxPro li .img {
+        width: 90%;
+        height: auto;
+    }
+
+    .leftPart {
+        display: none;
+    }
+
+    .rightPart {
+        width: auto;
+    }
+
+    #productList li .img {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    #header {
+        display: none;
+    }
+
+    .m-hd {
+        display: block;
+    }
+
+    body {
+        padding-top: 80px;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    #inbar,
+    #banner {
+        margin-top: -20px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 640px) {
+    .about_box .fl {
+        float: none;
+    }
+
+    .shadow.mr30,
+    .about_box .fl.mr30 {
+        margin: 0;
+    }
+
+    .shadow img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (max-width: 320px) {}
